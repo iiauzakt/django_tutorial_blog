@@ -26,6 +26,8 @@ def home_page(request):
 
 
 print("hello world")
+print("hello world")
+print("hello world")
 
 def detail(request, post_id):
     categories = Category.objects.all()
