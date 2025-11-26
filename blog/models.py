@@ -50,6 +50,7 @@ class Comment(models.Model):
     
     def __str__(self):
         return str(self.author)
+#     return str(self.author)
     
     
 class Rating(models.Model):
