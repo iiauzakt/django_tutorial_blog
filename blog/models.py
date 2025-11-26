@@ -8,7 +8,7 @@ class Category(models.Model):
     
     def __str__(self):
         return str(self.name)
-print("hello world")
+print("hello world") #hello world yozuvi ekranga chiqadi
     
 class Tag(models.Model):
     name = models.CharField(verbose_name="Tag name",max_length=250)
@@ -20,7 +20,7 @@ class Tag(models.Model):
 
 class Post(models.Model):
     title = models.CharField(verbose_name="Post title",max_length=550)
-    body = models.TextField(verbose_name="Post body")
+    body = models.TextField(verbose_name="Post body") #Post body
     author = models.CharField(verbose_name="Post author",default="Admin",max_length=100)
     category = models.ForeignKey(Category, on_delete=models.PROTECT,related_name='posts')
     tag = models.ManyToManyField(Tag)
@@ -40,7 +40,7 @@ class Post(models.Model):
     
     def __str__(self):
         return str(self.title)
-    
+
 
 class Comment(models.Model):
     author = models.CharField(verbose_name="Comment author",max_length=100,blank=False)
@@ -50,6 +50,7 @@ class Comment(models.Model):
     
     def __str__(self):
         return str(self.author)
+#     return str(self.author)
     
     
 class Rating(models.Model):
